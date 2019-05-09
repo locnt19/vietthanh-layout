@@ -2,7 +2,8 @@
 	"font": [
 		"bower_components/mdi/fonts/*",
 		"bower_components/font-awesome/webfonts/*",
-		"bower_components/linearicons/dist/web-font/fonts/*"
+		"bower_components/linearicons/dist/web-font/fonts/*",
+		"src/webfonts/*"
 	],
 	"globalJs": [
 		"bower_components/swiper/dist/js/swiper.min.js",
