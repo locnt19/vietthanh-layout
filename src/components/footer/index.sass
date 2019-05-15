@@ -1,0 +1,85 @@
+footer
+	background: #1F1F1D
+	padding: 30px 0 0
+	.logo
+		color: #FFCD18
+	.social
+		margin-top: 15px
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			margin: 0
+			&:not(:first-child)
+				margin-left: 15px
+	.subscribe
+		margin-top: 15px
+		color: #d6d6d6
+		text-align: center
+		margin-bottom: 15px
+		p
+			margin-bottom: 10px
+	.subscribe-form
+		position: relative
+		input
+			width: 100%
+			height: 30px
+			padding: 0 30px 0 15px
+			outline: none
+			border: none
+			background: #d6d6d6
+		button
+			outline: none
+			width: 30px
+			height: 30px
+			position: absolute
+			right: 0
+			top: 0
+			background: none
+			border: none
+			&:before
+				content: ''
+				width: 15px
+				height: 15px
+				background: url('../img/btn-send.png')
+				background-size: cover
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	.footer-item
+		color: #d6d6d6
+		margin-bottom: 15px
+		a
+			color: #d6d6d6
+			font-size: 12px
+			&:before
+				content: '\f35f'
+				display: inline-block
+				font-family: 'Material Design Icons'
+				font-size: inherit
+				text-rendering: auto
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+		h3
+			font-size: 16px
+		p
+			font-size: 12px
+			span:last-child
+				margin-left: 15px
+	.copyright
+		text-align: center
+		font-size: 13px
+		color: #d6d6d6
+		padding: 10px 0
+		border-top: 1px solid #2B2B26
+	@media (max-width: 992px)
+		.footer-item
+			ul
+				display: flex
+				justify-content: center
+				border-bottom: 1px solid #2B2B26
+				flex-flow: wrap
+				li
+					margin: 5px 5px 10px

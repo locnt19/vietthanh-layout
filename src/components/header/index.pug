@@ -1,18 +1,47 @@
 header
+	.qc-header
+		.left TRẢ GÓP 0%
+		.right
+			.content
+				span Không cần trả trước - 
+				span Rước máy về ngay!
+			.fas.fa-times.btn-close
 	.top-header
 		.container
 			.row
 				.col
 					a(href="#") Đăng nhập
 					a(href="#") Tạo tài khoản
+	.mobile
+		.container
+			.row
+				.col-12.d-flex.align-items-center.justify-content-between.position-static
+					.mobile-navbar
+						.mobile-navbar-top
+							.mobile-hamburger
+								span
+								span
+								span
+							.mobile-login
+								a(href="#") Đăng nhập
+								span |
+								a(href="#") Tạo tài khoản
+						.mobile-nav
+					.mobile-hamburger
+						span
+						span
+						span
+					.mobile-logo
+					.mobile-cart
 	.line-header
 	.bottom-header
 		.container
 			.row
-				.col.d-flex.align-items-center.justify-content-between
-					.logo
-						h1 việt thanh
-						p mucsic center
+				.col
+					.logo-wrap
+						.logo
+							h1 việt thanh
+							p mucsic center
 					.search-box.input-group
 						input.form-control(type="text" placeholder="Bạn muốn tìm ...")
 						.input-group-append
@@ -25,7 +54,66 @@ header
 						p
 							| Biên Hòa | 
 							strong 0908 868 951
-					.cart
-						img(src="./img/cart.png", alt="cart-icon")
-						.number
-							span 13
+					.cart-wrap
+						.cart
+							img(src="./img/cart.png", alt="cart-icon")
+							.number
+								span 13
+							.cart-popup
+								-for(i = 0; i < 2; i++)
+									.item
+										.box-img
+											img(src='./img/product/h01.jpg', alt='./img/product/h01.jpg')
+										.item-detail
+											a(href="#") Nashville Tele Honey Blonde
+											p 600.000đ
+										.item-count
+											p x
+												span 1
+											button.btn-xoa Xóa
+								.item-payment
+									p Thành tiền
+										span 1.234.000đ
+									a(href="#").btn-thanhtoan Xem giỏ hàng
+	.navbar-header
+		.container
+			.row
+				.col-12
+					ul.main-nav
+						li
+							a(href="#") Trang chủ
+						li.active
+							a(href="#") Danh mục sản phẩm
+							span.mdi.mdi-chevron-down.btn-dropdown
+							ul.sub-nav
+								li
+									a(href="#") piano 1
+								li
+									a(href="#") piano 2
+								li
+									a(href="#") piano 3
+								li.active
+									a(href="#") piano 4
+									span.mdi.mdi-chevron-right.btn-dropdown
+									ul.sub-nav
+										li
+											a(href="#") piano 1
+										li
+											a(href="#") piano 2
+										li
+											a(href="#") piano 3
+										li
+											a(href="#") piano 4
+						li
+							a(href="#") PIANO
+							span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							a(href="#") TRƯỜNG NHẠc
+							span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							a(href="#") CHO THUÊ
+							span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							a(href="#") TUYỂN DỤNG
+						li
+							a(href="#") TƯ VẤN

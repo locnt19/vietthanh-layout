@@ -1,20 +1,67 @@
 header
 	background: #FFCD18
-	.logo
-		text-align: center
-		h1
-			font-family: 'Source Sans Pro', sans-serif
-			font-size: 40px
-			white-space: nowrap
-			font-weight: 900
-			text-transform: uppercase
-			line-height: 1
-		p
-			font-family: 'amazoneBT'
-			font-size: 36px
-			line-height: 1
+	.qc-header
+		display: flex
+		.left
+			flex: 0 0 25%
+			max-width: 25%
+			color: #FFF500
+			font-weight: 700
+			text-align: right
 			position: relative
-			margin-top: -10px
+			&:after
+				position: absolute
+				top: 0
+				left: 100%
+				width: 0
+				height: 0
+				border-top: 15px solid transparent
+				border-bottom: 15px solid transparent
+				border-left: 15px solid #0FCAB8
+				content: ''
+		.left,.right
+			padding: 5px 0
+			line-height: 1
+			background-image: linear-gradient(to right, #6A56CE, #0FCAB8)
+			font-size: 20px
+		.right
+			display: flex
+			flex: 0 0 75%
+			max-width: 75%
+			font-style: italic
+			color: #fff
+			padding-left: 30px
+			.btn-close
+				font-size: 16px
+				display: inline-block
+				margin-left: auto
+				cursor: pointer
+				position: relative
+				&:before
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					right: 15px
+		@media (max-width: 992px)
+			.left,.right
+				font-size: 16px
+			.left
+				&:after
+					border-top: 13.5px solid transparent
+					border-bottom: 13.5px solid transparent
+					border-left: 18px solid #0FCAB8
+		@media (max-width: 576px)
+			.left
+				display: flex
+				align-items: center
+				&:after
+					border-top: 18px solid transparent
+					border-bottom: 18px solid transparent
+					border-left: 18px solid #0FCAB8
+			.left,.right
+				font-size: 13px
+				span
+					display: block
 	.top-header
 		.col
 			text-align: right
@@ -28,7 +75,12 @@ header
 		background: #fed645
 		height: 1px
 	.bottom-header
-		padding: 20px 0
+		@media (min-width: 992px)
+			padding: 20px 0
+			.col
+				display: flex
+				justify-content: space-between
+				align-items: center
 	.search-box
 		width: 50%
 		input, button
@@ -46,17 +98,23 @@ header
 			background: #fff
 			padding: 0 8px
 			font-size: 24px
+		@media (max-width: 992px)
+			width: 100%
+			margin: 15px 0
 	.phone-box
-		// display: inline-block
-		float: left
-		padding: 15px
-		border-radius: 4px
-		border: 1px solid #eabb11
+		text-align: center
+		@media (min-width: 992px)
+			float: left
+			padding: 15px
+			border-radius: 4px
+			border: 1px solid #eabb11
+		@media (max-width: 992px)
+			margin-bottom: 15px
+			p
+				display: inline-block
 	.cart
-		// display: inline-block
 		float: right
 		position: relative
-		// margin-left: auto
 		.number
 			position: absolute
 			top: -2px
@@ -67,6 +125,205 @@ header
 			line-height: 1
 			width: 17px
 			height: 17px
-			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
 			span
 				font-size: 12px
+				pointer-events: none
+	.cart-popup
+		width: 250px
+		position: absolute
+		top: 40px
+		right: -10px
+		background: #fff
+		border: 1px solid #E5E5E5
+		z-index: 19
+		display: none
+		&:before
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 8px 8px
+			border-color: transparent transparent #E5E5E5 transparent
+			position: absolute
+			top: -8px
+			right: 10px
+		.item
+			display: flex
+			padding: 10px
+			border-bottom: 1px solid #F3F4F6
+			.box-img
+				width: 80px
+				height: 80px
+			.item-detail
+				margin: 0 5px
+				a, p
+					font-size: 13px
+					font-weight: 400
+				a
+					color: #000
+				p
+					font-weight: 700
+					color: #E53935
+			.item-count
+				text-align: right
+				font-size: 13px
+				button
+					margin-top: 10px
+					background: #fff
+					border: 1px solid #E5E5E5
+					border-radius: 3px
+		.item-payment
+			font-size: 13px
+			padding: 10px
+			background: #F3F4F6
+			span
+				float: right
+				font-weight: 700
+				color: #E53935
+			a
+				text-align: center
+				display: block
+				padding: 10px 0
+				color: #fff
+				font-size: 16px
+				background-image: linear-gradient(#FFC000, #F6A501)
+				border-radius: 4px
+				margin-top: 15px
+	.navbar-header
+		background: #fff
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3)
+	.main-nav
+		display: flex
+		li
+			display: flex
+			align-items: center
+			position: relative
+		> li
+			padding: 15px
+			font-size: 13px
+			a
+				text-transform: uppercase
+				font-weight: 900
+			> a
+				color: #7b858a
+			&.active, &:hover
+				background: #F1F1F1
+				> a
+					color: #373737
+	.sub-nav
+		position: absolute
+		bottom: 0
+		top: 100%
+		left: 0
+		width: 170px
+		display: none
+		z-index: 20
+		&.active
+			display: block
+		li
+			padding: 15px
+			background: #FFCD18
+			border-left: 1px solid #FFCD18
+			border-right: 1px solid #FFCD18
+			&:first-child
+				border-top: 1px solid #FFCD18
+			&:last-child
+				border-bottom: 1px solid #FFCD18
+			&:hover, &.active
+				background: #fff
+				> a
+					color: #373737
+		.sub-nav
+			top: 0
+			left: 100%
+	.btn-dropdown
+		cursor: pointer
+		font-size: 20px
+		margin-left: 5px
+		color: #7b858a
+	.mobile-navbar
+		display: none
+	@media (max-width: 992px)
+		.top-header
+			display: none
+		.mobile
+			position: relative
+			padding: 15px 0
+		.mobile-hamburger
+			width: 30px
+			height: 22.5px
+			position: relative
+			transform: rotate(0deg)
+			transition: .5s ease-in-out
+			cursor: pointer
+				display: none
+			span
+				background: #000
+				display: block
+				position: absolute
+				height: 3px
+				width: 100%
+				border-radius: 9px
+				opacity: 1
+				left: 0
+				transform: rotate(0deg)
+				transition: all .3s ease-in-out
+				&:nth-child(1) 
+					top: 0px
+					transform-origin: left center
+				&:nth-child(2) 
+					top: 9px
+					transform-origin: left center
+				&:nth-child(3) 
+					top: 18px
+					transform-origin: left center
+			&.active
+				span
+					&:nth-child(1)
+						transform: rotate(45deg)
+						top: 0px
+						left: 8px
+					&:nth-child(2) 
+						opacity: 0
+						width: 0
+					&:nth-child(3) 
+						transform: rotate(-45deg)
+						top: 21.5px
+						left: 8px	
+		.mobile-navbar
+			display: block
+			background: #fff
+			width: 80%
+			height: 100vh
+			position: absolute
+			left: -100%
+			top: 0
+			z-index: 20
+			transition: all 1s ease-in-out
+			&.active
+				left: 0
+				box-shadow: 100vh 100vh 100vh 100vh rgba(0, 0, 0, .3)
+			.main-nav
+				li
+					display: block
+					border-bottom: 1px solid #f1f1f1
+			.sub-nav
+				width: 100%
+				position: static
+				li
+					border: none
+					background: transparent
+		.mobile-navbar-top
+			display: flex
+			padding: 15px
+		.mobile-login
+			flex: 100%
+			text-align: center
+			span
+				margin: 0 10px
+		.mobile-nav
+			.main-nav
+				display: block
