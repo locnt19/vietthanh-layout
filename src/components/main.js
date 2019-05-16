@@ -60,4 +60,31 @@ $(document).ready(function () {
 			$('.bottom-header .col').removeClass('d-flex')
 		}
 	})
+	// ==================== product detail ====================
+	var galleryThumbs = new Swiper('.product-detail .gallery-thumbs', {
+		slidesPerView: 3,
+		// spaceBetween: 30,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		slideToClickedSlide: true,
+		direction: 'vertical',
+		speed: 1900,
+		breakpoints: {}
+	});
+	var galleryMain = new Swiper('.product-detail .gallery-main', {
+		spaceBetween: 15,
+		slideToClickedSlide: true,
+		loop: true,
+		speed: 1900,
+		thumbs: {
+			swiper: galleryThumbs
+		},
+	});
+	// $('.product-detail .product-quantity input').TouchSpin({
+	// 	min: 0,
+	// 	max: 100,
+	// 	buttondown_class: "btn btn-default",
+	// 	buttonup_class: "btn btn-default"
+	// });
 });

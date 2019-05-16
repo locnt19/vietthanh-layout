@@ -1,0 +1,280 @@
+.product-detail
+	.product-image
+		display: flex
+		margin-bottom: 30px
+		.gallery-thumbs,
+		.gallery-main
+			height: 400px
+		.gallery-thumbs
+			flex: 0 0 100px
+			max-width: 100px
+			.box-img
+				width: 100px
+				height: 100px
+				overflow: hidden
+				border: 1px solid #ECECEC
+				border-radius: 4px
+				display: flex
+				align-items: center
+				justify-content: center
+			.swiper-slide-thumb-active
+				.box-img
+					border: 2px solid #FFCD18
+		.gallery-main
+			flex: 0 0 calc(100%-100px)
+			max-width: calc(100%-100px)
+			margin-left: 15px
+			.box-img
+				height: 400px
+				display: flex
+				align-items: center
+				justify-content: center
+	.product-info
+		h2
+			font-size: 30px
+			margin-bottom: 10px
+	.product-rate
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin-bottom: 10px
+		img
+			margin: 0
+			margin-right: 3px
+		a
+			line-height: 1
+			color: #9a9a9a
+			font-size: 11px
+	.product-price
+		display: flex
+		align-items: center
+		line-height: 1
+		margin-bottom: 10px
+		div:not(:last-child)
+			margin-right: 20px
+		.price-new
+			font-size: 24px
+			font-weight: 700
+			color: #545454
+		.price-old
+			text-decoration: line-through
+			font-size: 14px
+			color: #999999
+		.price-new, .price-old
+			position: relative
+			&:after
+				content: '\20AB'
+				font-size: 70%
+				position: absolute
+				top: 0
+		.discount
+			color: #2c2c2c
+			font-size: 12px
+			padding: 2px 5px
+			background: #FFCD18
+			border-radius: 3px
+	.product-hot-discount
+		width: 300px
+		border-radius: 4px
+		overflow: hidden
+		margin-bottom: 10px
+		h4
+			font-size: 16px
+			background-image: linear-gradient(#FFAE00, #FF8308)
+			color: #fff
+			padding: 5px 15px
+		div
+			display: flex
+			align-items: center
+			background: #EFEFEF
+			padding: 5px 15px
+		span
+			color: #FF8907
+			font-size: 28px
+			font-weight: 700
+		time
+			margin-left: 10px
+			font-size: 13px
+	.product-branch
+		margin-bottom: 10px
+		p
+			display: inline-block
+			font-size: 13px
+			&:before
+				font-size: 16px
+		.custom-select
+			width: auto
+			border: none
+			outline: none
+			box-shadow: none
+			padding: 5px 15px
+			padding-left: 5px
+			background: url("../img/icon-select.png") no-repeat center right
+			color: #FF8907
+			font-weight: 700
+	.product-brief-info
+		border: 1px solid #ccc
+		padding: 15px
+		border-radius: 4px
+		margin-bottom: 10px
+		li
+			position: relative
+			padding-left: 20px
+			&:before
+				position: absolute
+				top: 2px
+				left: 0
+				color: #ccc
+				content: '\f9dd'
+				display: inline-block
+				font-family: 'Material Design Icons'
+				font-size: inherit
+				text-rendering: auto
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+	.product-color
+		margin-bottom: 10px
+		.radio-btn
+			display: inline-block
+			margin-left: 10px
+		.radio
+			&:not(:checked),
+			&:checked
+				display: none
+			&:not(:checked) + label,
+			&:checked + label
+				position: relative
+				padding-left: 25px
+			&:not(:checked) + label:before,
+			&:checked + label:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 20px
+				height: 20px
+				background: #fff
+				border-radius: 99px
+				box-shadow: inset 0 0 0 1px #ccc
+			&:checked + label:before
+				background: #fff
+				box-shadow: inset 0 0 0 1px #FF8907
+			&:not(:checked) + label:after,
+			&:checked + label:after
+				position: absolute
+				top: 3px
+				left: 3px
+				font-size: 14px
+				color: #FF8907
+				transition: all .2s ease-in-out
+				content: '\f764'
+				display: inline-block
+				font-family: 'Material Design Icons'
+				text-rendering: auto
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+			&:not(:checked) + label:after
+				opacity: 0
+				transform: scale(0)
+			&:checked + label:after
+				opacity: 1
+				transform: scale(1)
+	.product-quantity
+		margin-bottom: 10px
+		.quantity
+			display: inline-flex
+			margin: 0 10px
+			input, button
+				outline: none
+				border: none
+				height: 30px
+				border: 1px solid #ccc
+				margin: 0
+			button
+				width: 30px
+			input
+				width: 40px
+				padding: 0 10px
+	.product-buy
+		margin-bottom: 10px
+		display: flex
+		.btn-buynow
+			margin-right: 15px
+			background-image: linear-gradient(#FFAE00, #FF8308)
+		.btn-buynow, .btn-installment
+			width: 100%
+			padding: 10px 50px
+			color: #fff
+			border-radius: 4px
+			border: none
+			outline: none
+			cursor: pointer
+			h4
+				text-transform: uppercase
+				font-size: 18px
+				font-weight: 700
+			span
+				font-size: 12px
+		.btn-installment
+			background-image: linear-gradient(#FEBE00, #F5A301)
+	.product-contact
+		margin-bottom: 10px
+		p
+			margin-bottom: 10px
+		a
+			font-size: 14px
+			position: relative
+			left: 10px
+			padding-left: 20px
+			line-height: 20px
+			text-decoration: underline !important
+			&:before
+				content: ''
+				width: 22px
+				height: 21px
+				background: url('../img/icon-contact.png') center center
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translate(-50%, -50%)
+		.contact-group
+			display: flex
+			justify-content: space-between
+			input
+				height: 35px
+				margin-right: 10px
+				border: 1px solid #ccc
+				padding: 0 15px
+				outline: none
+				box-shadow: none
+				width: 100%
+				&:focus
+					border-color: #FF8308
+					box-shadow: 0 0 5px 0 #FF8308
+				&:nth-child(1)
+					flex: 0 0 150px
+					max-width: 150px
+				&:nth-child(2)
+					flex: 0 0 100px
+					max-width: 100px
+			button
+				flex: 0 0 60px
+				max-width: 60px
+				height: 35px
+				outline: none
+				box-shadow: none
+				border: none
+				background-image: linear-gradient(#FFAE00, #FF8308)
+				position: relative
+				cursor: pointer
+				&:before
+					content: ''
+					width: 15px
+					height: 15px
+					background: url('../img/btn-send-1.png') center center
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)

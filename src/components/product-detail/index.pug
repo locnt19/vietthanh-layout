@@ -1,0 +1,110 @@
+section.product-detail
+	.container
+		.row
+			.col-md-6
+				.product-image
+					.swiper-container.gallery-thumbs
+						.swiper-wrapper
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h01.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h02.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h03.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h01.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h02.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h03.jpg", alt="1")
+					.swiper-container.gallery-main
+						.swiper-wrapper
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h01.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h02.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h03.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h01.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h02.jpg", alt="1")
+							.swiper-slide
+								.box-img
+									img(src="./img/product/h03.jpg", alt="1")
+			.col-md-6
+				.product-info
+					h2 Nashville Tele Honey Blonde
+					.product-rate
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-off.png", alt="star-off")
+						a(href="javascript:void(0)") 17 đánh giá
+					.product-price
+						.price-new 29,234,000
+						.price-old 35,020,000
+						.discount 15%
+					.product-hot-discount
+						h4 Mua online giảm sốc 7% còn
+						div
+							span 28,150,000đ
+							time Kết thúc 17/03
+					.product-branch
+						p.mdi.mdi-map-marker Chi nhánh có hàng:
+						select.custom-select
+							option(selected="") 386 CMT8, P.10, Q.3, TPHCM
+							option(value="volvo") Volvo
+							option(value="fiat") Fiat
+							option(value="audi") Audi
+					.product-brief-info
+						ul
+							li Nguồn âm thanh Morphing AiR đa chiều
+							li Nguồn âm thanh Morphing AiR đa chiều
+							li Nguồn âm thanh Morphing AiR đa chiều
+					.product-color
+						span Màu sắc:
+						.radio-btn
+							input.radio(type="radio" id='mau-trang' name="product-color")
+							label(for="mau-trang") Trắng
+						.radio-btn
+							input.radio(type="radio" id='mau-den' name="product-color")
+							label(for="mau-den") Đen
+						.radio-btn
+							input.radio(type="radio" id='mau-vang' name="product-color")
+							label(for="mau-vang") Vàng
+					.product-quantity
+						span Số lượng:
+						//- .quantity
+						//- 	button.decrement -
+						//- 	input(value="1")
+						//- 	button.increment +
+						//- span.stored (Còn 45 sản phẩm)
+						input(value="1")
+					.product-buy
+						button.btn-buynow
+							h4 Mua ngay
+							span Giao hàng thu tiền tận nơi
+						button.btn-installment
+							h4 Mua trả góp
+							span Thủ tục online đơn giản
+					.product-contact
+						p
+							a(href="#") Để  lại thông tin chúng tôi sẽ liên hệ bạn?
+						.contact-group
+							input(type="text" placeholder="Họ và tên")
+							input(type="text" placeholder="Điện thoại")
+							input(type="email" placeholder="Email")
+							button(type="submit")
