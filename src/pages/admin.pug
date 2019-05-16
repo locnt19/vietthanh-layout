@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:400,700|Source+Sans+Pro:900" rel="stylesheet")
+		link(rel="stylesheet", href="./css/global.min.css")
+		link(rel="stylesheet", href="./css/main.min.css")
+		//- title #{title}
+
+	//- body(class=bodyClass)
+	body
+		include ../components/admin/index.pug
+		//- block header
+			//- include ../components/header/index.pug
+		//- include ../components/navbar/index.pug
+		//- main
+		//- 	block main
+		//- block footer
+		//- 	include ../components/footer/index.pug
+		//- include ../components/back-to-top/index.pug
+		script(src="./js/global.min.js")
+		script(src="./js/main.min.js")
