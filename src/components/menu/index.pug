@@ -1,0 +1,78 @@
+section.menu-container
+	.navbar-nav
+		.container
+			.row
+				.col-12
+					ul.main-nav
+						li
+							.nav-title
+								a(href="#") Trang chủ
+						li.active
+							.nav-title
+								a(href="https://www.google.com/") Danh mục sản phẩm
+								span.mdi.mdi-chevron-down.btn-dropdown
+							.nav-content
+								-for(i = 0; i < 5; i++)
+									ul.menu
+										.menu-title
+											span.mdi.mdi-chevron-right.btn-dropdown
+											a(href="#") menu level 1
+										li
+											a(href="#") menu level 2
+										li
+											a(href="#") menu level 2
+										li
+											a(href="#") menu level 2
+										li
+											a(href="#") menu level 2
+						li
+							.nav-title
+								a(href="#") PIANO
+								span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							.nav-title
+								a(href="#") TRƯỜNG NHẠC
+								span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							.nav-title
+								a(href="#") CHO THUÊ
+								span.mdi.mdi-chevron-down.btn-dropdown
+						li
+							.nav-title
+								a(href="#") TUYỂN DỤNG
+						li
+							.nav-title
+								a(href="#") TƯ VẤN
+	.navbar-menu
+		.container
+			.row
+				.col-lg-2
+					ul.menu
+						.menu-title
+							a(href="#") menu level 1
+							span.mdi.mdi-chevron-right.btn-dropdown
+						li
+							a(href="#") menu level 2
+						li
+							a(href="#") menu level 2
+						li
+							a(href="#") menu level 2
+						li
+							a(href="#") menu level 2
+				-for(i = 0; i < 2; i++)
+					.col-lg-2
+						-for(j = 0; j < 2; j++)
+							ul.menu
+								.menu-title
+									a(href="#") menu level 1
+									span.mdi.mdi-chevron-right.btn-dropdown
+								li
+									a(href="#") menu level 2
+								li
+									a(href="#") menu level 2
+								li
+									a(href="#") menu level 2
+								li
+									a(href="#") menu level 2
+				.col-lg-6
+					img(src="./img/product/h00.jpg", alt="1")

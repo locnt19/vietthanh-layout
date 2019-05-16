@@ -15,7 +15,8 @@ header
 	.mobile
 		.container
 			.row
-				.col-12.d-flex.align-items-center.justify-content-between.position-static
+				//- .col-12.d-flex.align-items-center.justify-content-between.position-static
+				.col-12.d-flex.align-items-center.justify-content-between
 					.mobile-navbar
 						.mobile-navbar-top
 							.mobile-hamburger
@@ -75,45 +76,4 @@ header
 									p Thành tiền
 										span 1.234.000đ
 									a(href="#").btn-thanhtoan Xem giỏ hàng
-	.navbar-header
-		.container
-			.row
-				.col-12
-					ul.main-nav
-						li
-							a(href="#") Trang chủ
-						li.active
-							a(href="#") Danh mục sản phẩm
-							span.mdi.mdi-chevron-down.btn-dropdown
-							ul.sub-nav
-								li
-									a(href="#") piano 1
-								li
-									a(href="#") piano 2
-								li
-									a(href="#") piano 3
-								li.active
-									a(href="#") piano 4
-									span.mdi.mdi-chevron-right.btn-dropdown
-									ul.sub-nav
-										li
-											a(href="#") piano 1
-										li
-											a(href="#") piano 2
-										li
-											a(href="#") piano 3
-										li
-											a(href="#") piano 4
-						li
-							a(href="#") PIANO
-							span.mdi.mdi-chevron-down.btn-dropdown
-						li
-							a(href="#") TRƯỜNG NHẠc
-							span.mdi.mdi-chevron-down.btn-dropdown
-						li
-							a(href="#") CHO THUÊ
-							span.mdi.mdi-chevron-down.btn-dropdown
-						li
-							a(href="#") TUYỂN DỤNG
-						li
-							a(href="#") TƯ VẤN
+	include ../menu/index.pug

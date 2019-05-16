@@ -15,6 +15,15 @@ body
 		font-size: 14px
 	@media (max-width: 576px)
 		font-size: 13px
+	&::-webkit-scrollbar
+		width: 8px
+	&::-webkit-scrollbar-track
+		background: #E5E5E5
+	&::-webkit-scrollbar-thumb
+		// border-radius: 99px
+		background: rgba(#ff8308, 0.5)
+	&::-webkit-scrollbar-thumb:hover
+		background-image: linear-gradient(to right, #ffae00, #ff8308)
 i
 	font-style: normal
 	outline: none
@@ -54,6 +63,7 @@ ul
 	@media (max-width: 992px)
 		h1
 			font-size: 32px
+			line-height: 1.5
 		p
 			font-size: 28px
 	@media (max-width: 576px)
@@ -68,7 +78,7 @@ ul
 
 @import "header/index.sass"
 
-@import "navbar/index.sass"
+@import "menu/index.sass"
 
 @import "footer/index.sass"
 
