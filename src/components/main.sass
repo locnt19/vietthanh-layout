@@ -20,7 +20,6 @@ body
 	&::-webkit-scrollbar-track
 		background: #E5E5E5
 	&::-webkit-scrollbar-thumb
-		// border-radius: 99px
 		background: rgba(#ff8308, 0.5)
 	&::-webkit-scrollbar-thumb:hover
 		background-image: linear-gradient(to right, #ffae00, #ff8308)
@@ -37,8 +36,10 @@ img
 	max-width: 100%
 	height: auto
 hr
-	margin: 0
-	border: .5px solid #D7D7D7
+	display: block
+	max-width: 1110px
+	margin: 0 auto
+	border: .5px solid #ccc
 
 ul
 	list-style: none
@@ -84,4 +85,10 @@ ul
 
 @import "back-to-top/index.sass"
 
-@import "product-detail/index.sass"
+@import "product/product-detail/index.sass"
+
+@import "product/product-similar/index.sass"
+
+@import "product/product-full-content/index.sass"
+
+@import "product/product-rating/index.sass"

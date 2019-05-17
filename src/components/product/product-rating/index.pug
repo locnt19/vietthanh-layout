@@ -1,0 +1,70 @@
+section.product-rating
+	.container
+		.row
+			.col-12#danh-gia
+				h3 Đánh giá sản phẩm
+			.col-12
+				.top-rate
+					.rate-average
+						h4 Đánh giá trung bình
+						.average 4/5
+						.star
+							img(src="./img/star-on.png", alt="star-on")
+							img(src="./img/star-on.png", alt="star-on")
+							img(src="./img/star-on.png", alt="star-on")
+							img(src="./img/star-on.png", alt="star-on")
+							img(src="./img/star-off.png", alt="star-off")
+							p (17 đánh giá)
+					.rate-total
+						ul
+							-for(i = 0; i < 5; i++)
+								li.chart
+									.label 5
+										img(src="./img/icon-star.jpg", alt="1")
+									.progressing
+										.progressing-bar
+									.percent 80%
+					.write-comment
+						p Chia sẽ nhận xét về sản phẩm
+						button.btn-write-comment Viết nhận xét của bạn
+			.col-12
+				.comment-container
+					-for(i = 0; i < 3; i++)
+						.comment-item
+							.avatar
+								.box-img
+									img(src="./img/comment/avatar.png", alt="1")
+								.profile
+									name
+										a(href="#") Lộc Thành
+									time 1 ngày trước
+									.rated
+										img(src="./img/star-on.png", alt="star-on")
+										img(src="./img/star-on.png", alt="star-on")
+										img(src="./img/star-on.png", alt="star-on")
+										img(src="./img/star-on.png", alt="star-on")
+										img(src="./img/star-off.png", alt="star-off")
+									.bought
+										p.mdi.mdi-shield-check Đã mua sản phẩm
+							.content
+								.rated
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-off.png", alt="star-off")
+									p Tuyệt vời
+								.bought
+									p.mdi.mdi-shield-check Đã mua sản phẩm
+								.main-content
+									.content-wrap.limited
+										p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore itaque tempora suscipit laboriosam architecto, officia quaerat id provident vel delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum temporibus cupiditate! Assumenda velit suscipit dignissimos similique quos! Eveniet corrupti et quaerat praesentium corporis similique veritatis nesciunt totam eius quia.
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, minus omnis? Id perspiciatis doloremque optio eos quisquam animi, vel consequatur numquam distinctio hic soluta, ab itaque? Doloremque amet modi beatae!
+									.readmore Đọc tiếp
+										em.mdi.mdi-chevron-down
+									.box-img
+										a(href="./img/comment/avatar.png" data-fancybox="1")
+											img(src="./img/comment/avatar.png", alt="").lazyloaded
+									.box-img
+										a(href="./img/comment/avatar.png" data-fancybox="1")
+											img(src="./img/comment/avatar.png", alt="").lazyloaded

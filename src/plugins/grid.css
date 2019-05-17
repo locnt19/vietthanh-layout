@@ -33,7 +33,7 @@ body {
 	text-align: left;
 	background-color: #fff;
 }
-
+/* 
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -81,7 +81,7 @@ th {
 label {
 	display: inline-block;
 	margin-bottom: 0.5rem;
-}
+} */
 /* 
 button {
 	border-radius: 0;
@@ -139,7 +139,7 @@ button::-moz-focus-inner,
 	border-style: none;
 } */
 
-input[type="radio"],
+/* input[type="radio"],
 input[type="checkbox"] {
 	box-sizing: border-box;
 	padding: 0;
@@ -178,8 +178,8 @@ textarea {
 
 [hidden] {
 	display: none !important;
-}
-
+} */
+/* 
 h1,
 h2,
 h3,
@@ -259,7 +259,7 @@ hr {
 .figure-caption {
 	font-size: 90%;
 	color: #6c757d;
-}
+} */
 
 .container {
 	width: 100%;
