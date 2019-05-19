@@ -100,7 +100,33 @@ $(document).ready(function () {
 			swiper: productDetailGalleryThumbs
 		},
 	});
-
+	// increment decrement product-quantity
+	$('.product-quantity .increment').on('click',function () {
+		var value = $(this).siblings('.number').attr('value');
+		++value;
+		if (value < 99) {
+			$(this).siblings('.number').attr('value', value);
+			$('.product-quantity .decrement').removeAttr('style')
+		} else {
+			$(this).css({
+				'background': '#F3F4F6',
+				'color': '#A4A9AC'
+			})
+		}
+	})
+	$('.product-quantity .decrement').on('click',function () {
+		var value = $(this).siblings('.number').attr('value');
+		--value;
+		if (value > 0) {
+			$(this).siblings('.number').attr('value', value);
+			$('.product-quantity .increment').removeAttr('style')
+		} else {
+			$(this).css({
+				'background': '#F3F4F6',
+				'color': '#A4A9AC'
+			})
+		}
+	})
 	// product similar
 	var productSimilar = new Swiper('.product-similar .swiper-container', {
 		slidesPerView: 5,
@@ -146,27 +172,53 @@ $(document).ready(function () {
 		}, 1000)
 		$(this).parent().addClass('active')
 	})
+	// readmore mo-ta, thong-so
 	$('.product-detail-page #mo-ta').each(function () {
 		if ($('.product-detail-page #mo-ta').outerHeight() > 500) {
 			$('.product-detail-page #mo-ta').css({
 				'height': '500px'
 			})
-			$(this).parents('.content-tabs').siblings('.readmore').show()
+			$(this).siblings('.readmore-mo-ta').show()
 		}
 		if ($('.product-detail-page #mo-ta').outerHeight() < 500) {
-			$('.content-container .readmore').hide()
+			$(this).siblings('.readmore-mo-ta').hide()
 		}
 	})
-	$('.content-container .btn-readmore').on('click', function () {
+	$('.content-container .readmore-mo-ta .btn-readmore').on('click', function () {
 		$('.product-detail-page #mo-ta').css({
 			'height': 'auto'
 		})
 		$(this).hide()
 	})
-
+	if ($(window).width() < 768) {
+		$('.product-detail-page #thong-so').each(function () {
+			if ($(this).outerHeight() > 400) {
+				$(this).css({
+					'height': '400px'
+				})
+				$(this).siblings('.readmore-thong-so').show()
+			}
+			if ($(this).outerHeight() < 400) {
+				$(this).siblings('.readmore-thong-so').hide()
+			}
+		})
+	}
+	$('.content-container .readmore-thong-so .btn-readmore').on('click', function () {
+		$('.product-detail-page #thong-so').css({
+			'height': 'auto'
+		})
+		$(this).hide()
+	})
 	// readmore comment
+	if ($('.product-rating .main-content .content-wrap').height() < 55) {
+		$('.product-rating .main-content .readmore').hide()
+	} else {
+		$('.product-rating .main-content .readmore').show()
+	}
 	$('.product-rating .main-content .readmore').on('click', function () {
-		$(this).siblings('.content-wrap').removeClass('limited')
+		$(this).siblings('.content-wrap').css({
+			'height': 'auto'
+		})
 		$(this).hide()
 	})
 });

@@ -1,0 +1,24 @@
+nav.breadcrumb
+	padding: 15px 0
+	font-size: 12px
+	a
+		color: #8e8e8e
+	ol
+		list-style: none
+		display: flex
+		flex-wrap: wrap
+		li
+			position: relative
+			&:not(:first-child)
+				&:before
+					margin: 0 10px
+					content: '\e876'
+					font-family: 'Linearicons-Free'
+					speak: none
+					font-style: normal
+					font-weight: normal
+					font-variant: normal
+					text-transform: none
+					line-height: 1
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale

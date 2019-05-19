@@ -1,0 +1,134 @@
+.catalogue
+	.product-item
+		flex: 0 0 25%
+		max-width: 25%
+		width: 100%
+		padding-right: 15px
+		padding-left: 15px
+		margin-bottom: 15px
+		transition: all .3s ease-in-out
+		.box-img
+			transition: all .3s ease-in-out
+			.new
+				top: 5px
+				right: 5px
+		.hot-deal-weekend
+			opacity: 0
+			margin-bottom: 10px
+			&.active
+				opacity: 1
+		.add-to-cart
+			visibility: hidden
+			opacity: 0
+			transition: all .3s ease-in-out
+			background: #FFCD18
+			border: none
+		&:hover
+			.box-img
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
+			.add-to-cart
+				opacity: 1
+				visibility: visible
+		// &.view-list
+		// 	flex: 0 0 100%
+		// 	max-width: 100%
+		// 	display: flex
+		// 	.box-img
+		// 		flex: 0 0 170px
+		// 		max-width: 100%
+	.catalogue-sidebar
+		padding: 15px
+		border: 1px solid #DAE2E6
+		border-radius: 4px
+		font-size: 14px
+		color: #848484
+		.title
+			text-transform: uppercase
+			font-weight: 700
+			color: #21293c
+			margin: 5px 0
+		.catalo-info
+			margin-bottom: 10px
+		.catalo-filter
+			border-top: 1px solid #DAE2E6
+			.title
+				display: flex
+				align-items: center
+				justify-content: space-between
+				span
+					width: 30px
+					height: 30px
+					position: relative
+					&:before
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+		.fitler-item
+			.item
+				margin: 7px 0
+			.checkbox
+				&:not(:checked),
+				&:checked
+					display: none
+				&:not(:checked) + label,
+				&:checked + label
+					position: relative
+					padding-left: 30px
+				&:not(:checked) + label:before,
+				&:checked + label:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					width: 20px
+					height: 20px
+					background: #fff
+					border-radius: 4px
+					box-shadow: inset 0 0 1px #ccc
+				&:checked + label:before
+					background: #f5a623
+				&:not(:checked) + label:after,
+				&:checked + label:after
+					content: '\f00c'
+					position: absolute
+					top: 2px
+					left: 4px
+					font-size: 12px
+					color: #fff
+					font-weight: 900
+					transition: all .2s
+					font-family: 'Font Awesome 5 Free'
+				&:not(:checked) + label:after
+					opacity: 0
+					transform: scale(0)
+				&:checked + label:after
+					opacity: 1
+					transform: scale(1)
+	.product-option,
+	.sort,
+	.display-number
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 14px
+	.product-option
+		justify-content: space-between
+		margin-bottom: 10px
+	.sort,
+	.display-number
+		select
+			margin-left: 5px
+			border: 1px solid #ccc
+			border-radius: 4px
+			padding: 5px 7px
+	.display-number
+		margin-left: auto
+	.display-mode
+		margin-left: 10px
+		p
+			cursor: pointer
+			font-size: 20px
+			display: inline-block
+		p:first-child
+			font-size: 21px

@@ -88,12 +88,15 @@ section.product-detail
 							label(for="mau-vang") Vàng
 					.product-quantity
 						span Số lượng:
-						//- .quantity
-						//- 	button.decrement -
-						//- 	input(value="1")
-						//- 	button.increment +
-						//- span.stored (Còn 45 sản phẩm)
-						input(value="1")
+						.quantity
+							button.decrement -
+							input.number(value='1')
+							button.increment +
+						span.stored (Còn 45 sản phẩm)
+					.product-out-of-stock
+						button.btn-out-of-stock
+							h4 Sản phẩm đã hết hàng
+							span Liên hệ đặt hàng hoặc tư vấn sản phẩm tương tự
 					.product-buy
 						button.btn-buynow
 							h4 Mua ngay

@@ -1,0 +1,77 @@
+section.catalogue
+	.container
+		.row
+			.col-md-3
+				.catalogue-sidebar
+					.catalo-info
+						.title Piano điện đứng
+						ul
+							li
+								a(href="#") Piano điện đứng
+							li
+								a(href="#") Piano điện dương cầm
+					-for(i=0; i < 3; i++)
+						.catalo-filter
+							.title
+								a(href="#") Thương hiệu
+								span.mdi.mdi-chevron-down.btn-dropdown
+							.fitler-item
+								.item
+									input(type="checkbox" id="check-1").checkbox
+									label(for='check-1') Roland
+								.item
+									input(type="checkbox" id="check-2").checkbox
+									label(for='check-2') Casio
+								.item
+									input(type="checkbox" id="check-3").checkbox
+									label(for='check-3') Yamaha
+			.col-md-9
+				.product-option
+					.sort
+						p Sắp xếp theo:
+						select
+							option Giá thấp đến cao
+							option Giá cao đến thấp
+							option Tên từ A-Z
+							option Tên từ Z-A
+					.display-number
+						p Hiển thị:
+						select
+							option 16
+							option 32
+							option 64
+							option 128
+					.display-mode
+						p.mdi.mdi-view-list
+						p.mdi.mdi-view-sequential
+				.product-list
+					.row
+						-for(i = 0; i < 8; i++)
+							//- .product-item.view-list
+							.product-item
+								.box-img
+									.new Mới
+									a(href="#")
+										img(src="./img/product/h01.jpg", alt="1")
+								.hot-deal-weekend.active
+									a(href="#")
+										img(src="./img/product/hot-deal-weekend.png", alt="1")
+								.product-rate
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-on.png", alt="star-on")
+									img(src="./img/star-off.png", alt="star-off")
+									a(href="#") 17 đánh giá
+								.logo-brand
+									a(href="#")
+										img(src="./img/product/logo-brand.png", alt="1")
+								.product-name
+									a(href="#") Scherl & Roth SR46E3CFH
+								.product-price
+									.price-new 29,234,000
+									.price-old 35,020,000
+								button.add-to-cart
+									img(src="./img/cart.png", alt="cart")
+									p Thêm 
+										span vào giỏ hàng

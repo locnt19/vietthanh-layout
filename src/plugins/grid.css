@@ -4388,7 +4388,7 @@ input[type="button"].btn-block {
 .accordion>.card .card-header {
 	margin-bottom: -1px;
 }
-
+/* 
 .breadcrumb {
 	display: -ms-flexbox;
 	display: flex;
@@ -4847,7 +4847,7 @@ a.badge-dark.focus {
 
 .alert-dark .alert-link {
 	color: #040505;
-}
+} */
 
 @-webkit-keyframes progress-bar-stripes {
 	from {
@@ -4869,7 +4869,7 @@ a.badge-dark.focus {
 	}
 }
 
-.progress {
+/* .progress {
 	display: -ms-flexbox;
 	display: flex;
 	height: 1rem;
@@ -6400,7 +6400,7 @@ button.bg-dark:focus {
 	display: block;
 	clear: both;
 	content: "";
-}
+} */
 
 .d-none {
 	display: none !important;
@@ -6439,7 +6439,7 @@ button.bg-dark:focus {
 	display: -ms-inline-flexbox !important;
 	display: inline-flex !important;
 }
-
+/* 
 @media (min-width: 576px) {
 	.d-sm-none {
 		display: none !important;
@@ -6681,9 +6681,9 @@ button.bg-dark:focus {
 
 .embed-responsive-1by1::before {
 	padding-top: 100%;
-}
+} */
 
-.flex-row {
+/* .flex-row {
 	-ms-flex-direction: row !important;
 	flex-direction: row !important;
 }
@@ -6741,7 +6741,7 @@ button.bg-dark:focus {
 .flex-shrink-1 {
 	-ms-flex-negative: 1 !important;
 	flex-shrink: 1 !important;
-}
+} */
 
 .justify-content-start {
 	-ms-flex-pack: start !important;
@@ -6852,7 +6852,7 @@ button.bg-dark:focus {
 	-ms-flex-item-align: stretch !important;
 	align-self: stretch !important;
 }
-
+/* 
 @media (min-width: 576px) {
 	.flex-sm-row {
 		-ms-flex-direction: row !important;
@@ -7615,7 +7615,7 @@ button.bg-dark:focus {
 
 .overflow-hidden {
 	overflow: hidden !important;
-}
+} */
 
 .position-static {
 	position: static !important;
@@ -7637,7 +7637,7 @@ button.bg-dark:focus {
 	position: -webkit-sticky !important;
 	position: sticky !important;
 }
-
+/* 
 .fixed-top {
 	position: fixed;
 	top: 0;
@@ -8206,7 +8206,7 @@ button.bg-dark:focus {
 .ml-auto,
 .mx-auto {
 	margin-left: auto !important;
-}
+} */
 
 /* @media (min-width: 576px) {
 	.m-sm-0 {
@@ -10190,7 +10190,7 @@ a.text-dark:focus {
 .invisible {
 	visibility: hidden !important;
 } */
-
+/* 
 @media print {
 
 	*,
@@ -10288,6 +10288,6 @@ a.text-dark:focus {
 		color: inherit;
 		border-color: #dee2e6;
 	}
-}
+} */
 
 /*# sourceMappingURL=bootstrap.css.map */
