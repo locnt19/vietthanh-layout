@@ -1,0 +1,43 @@
+.home-service
+	background-color: #f4f4f4
+	margin-top: 25px
+	text-align: center
+	nav.service
+		ul
+			list-style: none
+			display: flex
+			justify-content: space-between
+			li
+				align-items: center
+				display: flex
+				padding: 15px 83px 15px 0
+				border-right: 2px solid #fff
+				&:last-child
+					border: none
+				div
+					padding-left: 15px
+@media (max-width: 1200px)
+	.container
+		max-width: 100%
+@media (max-width: 992px)
+	.home-service
+		.service
+			ul
+				li
+					padding:10px 0 0 0
+					padding-right: 50px
+					flex-wrap: wrap
+					div
+						width: 100%
+					div
+						width: 100%
+						h4
+							font-size: 13px
+						p
+							display: none
+@media (max-width: 768px)
+	.home-service
+		.service
+			ul
+				li
+					padding: 0 0 0 0 !important

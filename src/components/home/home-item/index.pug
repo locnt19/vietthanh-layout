@@ -1,0 +1,60 @@
+section.home-item
+	.home-item-top
+		.container
+			.row
+				.col-lg-4
+					.shock-price
+						.img-shock
+							img(src="./img/home/giasoccuoituan.png", alt="giasoc")
+							.content-shock
+								.left
+									p Giảm tới
+									h3 57%
+								.right
+									p GIÁ SỐC CUỐI TUẦN
+									p Ngày hết hạn: 12/5/20109
+				.col-lg-8
+					nav.tab-product
+						ul
+							li
+								p Piano
+							li
+								p Guitar
+							li
+								p Sản phẩm mới
+							li
+								p Violon Suzuki
+							li
+								p Đàn Violon
+	.home-item-content
+		.container.product-container
+			-for(i = 0; i < 6; i++)
+				.product-item
+					.box-img
+						.new Mới
+						a(href="#")
+							img(src="./img/product/h01.jpg", alt="1")
+					.hot-deal-weekend.active
+						a(href="#")
+							img(src="./img/product/hot-deal-weekend.png", alt="1")
+					.product-rate
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-on.png", alt="star-on")
+						img(src="./img/star-off.png", alt="star-off")
+						a(href="#") 17 đánh giá
+					.logo-brand
+						a(href="#")
+							img(src="./img/product/logo-brand.png", alt="1")
+					.product-name
+						a(href="#") Scherl & Roth SR46E3CFH
+					.product-price
+						.price-new 29,234,000
+						.price-old 35,020,000
+					button.add-to-cart
+						img(src="./img/cart.png", alt="cart")
+						p Thêm 
+							span vào giỏ hàng
+	.home-item-bot
+		a(href="#") Xem thêm 25 sản phẩm

@@ -1,0 +1,51 @@
+section.experience
+	background-color: #f2f2f2
+	padding-bottom: 65px
+	.container
+		.ex-title
+			display: inline-flex
+			padding:15px 0
+			h3
+				font-weight: 700
+				font-size: 18px
+				color:#003333
+				margin-left: 5px
+		.row
+			.ex-left
+				h4
+					font-size: 24px
+					color:#3b3b3b
+					padding:5px 0
+				p
+					font-size: 13px
+					color:#9c9c9c
+			.ex-right
+				display: flex
+				img
+					margin:0 20px 23px 0
+				div
+					p
+						font-size: 16px
+						color:#3b3b3b
+					span
+						font-size: 13px
+						color:#9c9c9c
+		@media (max-width: 992px)
+			.ex-left
+				margin-bottom: 10px
+				img
+					width:100%
+			.ex-right
+				div
+					p
+						font-size: 14px
+					span
+						display: none
+		@media (max-width: 768px)
+			.product-item
+				flex: 0 0 33%
+				max-width: 33%
+		@media (max-width: 576px)
+			.product-item
+				flex: 0 0 50%
+				max-width: 50%

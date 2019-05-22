@@ -73,6 +73,94 @@ ul
 		p
 			font-size: 20px
 
+.product-item
+	.box-img
+		overflow: hidden
+		height: 260px
+		display: flex
+		flex-flow: column
+		justify-content: flex-end
+		position: relative
+		margin-bottom: 10px
+		img
+			object-fit: cover
+		.new
+			width: 30px
+			height: 30px
+			background: #FFCD18
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 99px
+			font-size: 11px
+			position: absolute
+			top: 0
+			right: 0
+	.product-rate
+		justify-content: center
+		margin-bottom: 10px
+	.logo-brand
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		margin-bottom: 10px
+		a
+			display: block
+		img
+			object-fit: cover
+	.product-name
+		font-size: 14px
+		color: #787878
+		text-align: center
+		margin-bottom: 20px
+	.product-price
+		display: block
+		text-align: center
+		.price-new
+			font-size: 20px
+			margin-right: 0
+			margin-bottom: 10px
+		.price-old
+			font-size: 14px
+	.add-to-cart
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 3px
+		border: 1px solid #ccc
+		padding: 5px 10px
+		color: #383838
+		background: none
+		margin: 0 auto
+		outline: none
+		cursor: pointer
+		font-size: 13px
+		img
+			margin: 0
+			margin-right: 5px
+	@media (max-width: 767.98px)
+		.box-img
+			height: 170px
+		.add-to-cart
+			padding: 0 10px
+			img
+				transform: scale(.7)
+			span
+				display: none
+		.product-name
+			font-size: 12px
+			margin-bottom: 10px
+		.product-price
+			.price-new
+				margin-bottom: 5px
+		.product-rate
+			flex-wrap: wrap
+			a
+				max-width: 100%
+				margin: 5px 0 0
+
 @import "icons.sass"
 
 @import "breadcrumb/index.sass"
@@ -96,3 +184,11 @@ ul
 @import "product/product-rating/index.sass"
 
 @import "product/product-list/index.sass"
+
+@import "home/slider/index.sass"
+
+@import "home/service/index.sass"
+
+@import "home/home-item/index.sass"
+
+@import "home/experience/index.sass"
