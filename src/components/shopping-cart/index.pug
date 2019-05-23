@@ -1,0 +1,72 @@
+section.shopping-cart
+	.container-cart
+		.shopping-cart-content
+			.orther-product
+				a(href="#") Mua thêm sản phẩm khác
+			.cart
+				.cart-pro-detail
+					.row
+						.img-cart.col-lg-3
+							img(src="../img/shopping-cart/product.jpg", alt="Sanpham")
+						.detail-cart.col-lg-6
+							h4 Kolher &Sacmbell KC115D
+							p -Tặng ngay ghế đàn,ống sưởi,khăn phủ kín
+							p -Giao hàng trong ngày khi có nhu cầu
+							p -Giao sản phẩm miễn phí tại TP.HCM
+							p -Bảo hành chính hãng
+							p.detail-cart-bold Sản phẩm bao gồm:
+							a(href="#") Ghế đàn Piaon,Khăn phủ phím đàn Piano;Ống sưởi đàn Piano
+							p.detail-cart-bold Màu:Màu đen
+						.price-cart.col-lg-3
+							p 59.992.000 đ
+							.product-quantity
+								.quantity
+									button.decrement -
+									input.number(value='1')
+									button.increment +
+				.total
+					.row
+						.total-left.col-lg-8
+							p Tổng tiền:
+						.total-right.col-lg-4
+							p 59.992.000 đ
+							a(href="#") Sử dụng mã giảm giá
+				.custommer-info
+					.radio-cus
+						.radio-btn
+								input.radio(type="radio" id='anh' name="anh")
+								label(for="anh") Anh
+						.radio-btn
+								input.radio(type="radio" id='chi' name="anh")
+								label(for="chi") Chị
+					.input-cus
+						input(type="text" placeholder="Họ và tên")
+						input(type="text" placeholder="Số điện thoại")
+						input(type="text" placeholder="Email")
+						textarea(name="thongtinkhac", cols="30", rows="3",placeholder="Thông tin khác(Không bắt buộc)")
+				.custommer-deli
+					.deli-title
+						p Để được phục vụ nhanh hơn, hãy chọn thêm
+					.deli-content
+						.deli-radio
+							.radio-btn
+									input.radio(type="radio" id='diachigiaohang' name="diachi")
+									label(for="diachigiaohang") Địa chỉ giao hàng
+							.radio-btn
+									input.radio(type="radio" id='showroom' name="diachi")
+									label(for="showroom") Đến Showroom xem hàng
+						.form-deli
+							select(name="tinhthanh")
+								option(value="HCM") Thành phố HCM
+							select(name="huyen")
+								option(value="quan1") Quận 1
+							input(type="text" placeholder="Số nhà,tên đường,phường/xã")
+							.radio-btn
+									input.checkbox(type="checkbox" id='cathe' name="thanhtoan")
+									label Cà thẻ khi nhận hàng
+							.radio-btn
+									input.checkbox(type="checkbox" id='hoadon' name="thanhtoan")
+									label Xuất hóa đơn công ty
+							input(type="text" placeholder="Tên công ty")
+							input(type="text" placeholder="Địa chỉ công ty")
+							input(type="text" placeholder="Mã số thuế")
