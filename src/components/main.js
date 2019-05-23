@@ -221,4 +221,39 @@ $(document).ready(function () {
 		})
 		$(this).hide()
 	})
+	//slide-home
+	let  slideLichSuBottom = new Swiper('.home-slider .bottom-swiper', {
+		slidesPerView: 6,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		slideToClickedSlide: true,
+		speed: 2000,
+		breakpoints: {
+			992: {
+				slidesPerView: 5,
+			},
+			768: {
+				slidesPerView: 4,
+			},
+			576: {
+				slidesPerView: 3,
+			}
+		},
+		
+	});
+	let slideLichSuTop = new Swiper('.home-slider .top-swiper', {
+		slidesPerView: 1,
+		spaceBetween: 15,
+		slideToClickedSlide: true,
+		speed: 2000,
+		thumbs: {
+			swiper: slideLichSuBottom
+		},
+		pagination: {
+			el: '.top-swiper .swiper-pagination',
+			type: 'progressbar',
+		  },
+	});
+
 });

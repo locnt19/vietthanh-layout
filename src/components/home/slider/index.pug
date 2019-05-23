@@ -3,7 +3,28 @@ section.home-slider
 		.row
 			.col-lg-9.col-md-12
 				.slider-left
-					img(src="./img/home/slide.jpg", alt="slider")
+					.swiper-container.top-swiper
+						.swiper-wrapper
+							-for(i=0; i<6; i++)
+								.swiper-slide
+									figure
+										.box-img
+											img(src='./img/home/slide.jpg', alt='1').lazyload.blur-up
+						.swiper-pagination
+					.swiper-container.bottom-swiper
+						.swiper-wrapper
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
+							.swiper-slide
+								p Piano là một trong những nhạc cụk
 			.col-lg-3.col-md-12
 				.slider-right
 					img(src="./img/home/img-slider.jpg", alt="img-slider")
