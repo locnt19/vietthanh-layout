@@ -14,7 +14,6 @@ $(document).ready(function () {
 		}, 600);
 		return false;
 	});
-
 	// ads
 	$('.qc-header .btn-close').on('click', function () {
 		// $('.qc-header').remove();

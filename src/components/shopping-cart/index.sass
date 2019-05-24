@@ -13,9 +13,12 @@ section.shopping-cart
 			.cart
 				box-shadow: 0 0 10px 0 rgba(0,0,0,.3)
 				padding: 20px
+				@media (max-width: 992px)
+					box-shadow: none
 				.cart-pro-detail
 					position: relative
 					padding-bottom: 20px
+					text-align: center
 					&:after
 						content:''
 						position: absolute
@@ -23,14 +26,27 @@ section.shopping-cart
 						margin: 0 auto
 						height: 1px
 						bottom: 0
+						left: 0
 						background: #cccccc
 					.img-cart
 						img
 							height: 80px
+							margin-bottom: 15px
+						a
+							font-size: 12px
+						@media (max-width: 992px)
+							a
+								padding:5px 10px
+								border: 1px solid #867f7f
+								margin-bottom: 10px
+								&:before
+									content: ''
 					.detail-cart
 						text-align: left
 						h4
 							font-size: 17px
+						@media (max-width: 992px)
+							padding-top: 10px
 						p
 							font-size: 13px
 							color:#867f7f
@@ -45,29 +61,33 @@ section.shopping-cart
 							color:#ee4e4e
 							font-size: 20px
 							font-weight: bold
-						.quantity
-							display: inline-flex
-							position: absolute
-							right: 27px
-							bottom: 0
-							input, button
-								outline: none
-								border: none
-								height: 30px
-								border: 1px solid #ccc
-								margin: 0
-							button
-								width: 30px
-								background: #fff
-								font-weight: 700
-								cursor: pointer
-								color:#ee4e4e
-							input
-								border-right: none
-								border-left: none
-								text-align: center
-								width: 40px
-								padding: 0 10px
+						.product-quantity
+							.quantity
+								display: inline-flex
+								position: absolute
+								right: 27px
+								bottom: 0
+								input, button
+									outline: none
+									border: none
+									height: 30px
+									border: 1px solid #ccc
+									margin: 0
+								button
+									width: 30px
+									background: #fff
+									font-weight: 700
+									cursor: pointer
+									color:#ee4e4e
+								input
+									border-right: none
+									border-left: none
+									text-align: center
+									width: 40px
+									padding: 0 10px
+					@media (max-width: 992px)
+							.price-cart
+								text-align: left
 				.total
 					padding-top: 10px
 					padding-bottom: 20px
@@ -88,6 +108,11 @@ section.shopping-cart
 							font-weight: 700
 						a
 							color:#5c9bdc
+					@media(max-width: 576px)
+						.total-left
+							width: 50%
+						.total-right
+							width: 50%
 				.custommer-info
 					.radio-cus
 						.radio-btn
@@ -152,6 +177,9 @@ section.shopping-cart
 							border: 1px solid #d9d9d9
 							border-radius: 5px
 							padding-left: 10px
+						@media (max-width: 992px)
+							input
+								flex:0 0 100%
 				.custommer-deli
 					.deli-title
 						margin: 10px 0
@@ -237,3 +265,15 @@ section.shopping-cart
 								flex: 0 0 100%
 								label
 									padding-left: 10px
+						@media (max-width: 576px)
+							.deli-radio
+								.radio-btn
+									margin-bottom: 10px
+							.form-deli
+								select
+									flex: 0 0 100%
+									&:first-child
+										margin-bottom: 15px
+	@media (max-width: 992px)
+		.container-cart
+			width: 100%
