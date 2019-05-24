@@ -12,8 +12,26 @@ header
 				.col
 					a(data-fancybox="" data-src="#formDN" href="javascript:;").btnDN Đăng nhập
 						#formDN
-							h2 dang nhap thanh cong!
-					a(data-fancybox="" data-src="#formTTK" href="javascript:;").btnTTK Tạo tài khoản
+							.formDN-title
+								a(href="#" data-selectable="true") Đăng nhập
+								a(href="#" data-selectable="true") Tạo tài khoản
+							.formDN-content
+								p Email/SĐT
+								input(type="text" placeholder="Nhập email hoặc số điện thoại")
+								p Mật khẩu
+								input(type="text" placeholder="Mật khẩu từ 6 đến 32 kí tự")
+								.quen-mk
+									p Quên mật khẩu,nhấn tại 
+									a(href="#") đây
+								.btn-DN 
+									a(href="#") ĐĂNG NHẬP
+								.btn-DNFB
+									a(href="#") Đăng nhập bằng Facebook
+								.btn-DNGG
+									a(href="#") Đăng nhập bằng Google
+								.btn-DNZL
+									a(href="#") Đăng nhập bằng Zalo
+					a(data-fancybox="" data-src="#formTTK" href="javascript:;") Tạo tài khoản
 						#formTTK
 							h2 Dang ki thanh cong!
 	.mobile
