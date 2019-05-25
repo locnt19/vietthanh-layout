@@ -288,8 +288,8 @@ $(document).ready(function () {
 	}
 
 	// Add active class to the current button (highlight it)
-	var btnContainer = document.getElementById("nav.tab-product ul");
-	var btns = btnContainer.getElementsByClassName("home-tab");
+	var btnContainer = document.getElementById(".home-tab");
+	var btns = btnContainer.getElementsByClassName(".btn-tab-home");
 	for (var i = 0; i < btns.length; i++) {
 	btns[i].addEventListener("click", function(){
 		var current = document.getElementsByClassName("active");

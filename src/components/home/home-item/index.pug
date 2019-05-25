@@ -15,25 +15,20 @@ section.home-item
 									p Ngày hết hạn: 12/5/20109
 				.col-lg-8
 					nav.tab-product
-						ul
-							li
-								a(href="#").home-tab
-									p Piano
-							li
-								a(href="#").home-tab
-									p Guitar
-							li
-								a(href="#").home-tab
-									p Sản phẩm mới
-							li
-								a(href="#").home-tab
-									p Violon Suzuki
-							li
-								a(href="#").home-tab
-									p Đàn Violon
+						.home-tab
+							button(onclick="filterSelection('piano')").btn-tab-home
+								p Piano
+							button(onclick="filterSelection('guitar')").btn-tab-home
+								p Guitar
+							button(onclick="filterSelection('guitar')").btn-tab-home
+								p Sản phẩm mới
+							button(onclick="filterSelection('guitar')").btn-tab-home
+								p Violon Suzuki
+							button(onclick="filterSelection('guitar')").btn-tab-home
+								p Đàn Violon
 	.home-item-content
 		.container.product-container
-			-for(i = 0; i < 6; i++)
+			-for(i = 0; i < 2; i++)
 				.product-item.piano
 					.box-img
 						.new Mới

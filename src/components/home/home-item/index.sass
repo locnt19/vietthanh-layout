@@ -36,25 +36,26 @@
 						padding-top: 7px
 	nav.tab-product
 		padding-top: 3px
-		ul
+		.home-tab
 			display: flex
 			margin-top: 27px
 			flex-wrap: wrap
 			justify-content: center
-			li
+			button
+				background-color: #f4f4f4
+				border: none
+				margin-right:5px
+				cursor: pointer
+				border-radius: 3px
 				p
-					padding:0 0
-					background-color: #f4f4f4
-					color: #6f6f6f
 					padding: 7px 30px
-					margin-right:5px
 					font-size: 13px
-					border-radius: 3px
-					margin-bottom: 5px
-					&:hover
-						background-color: #f1c00e
+					color: #6f6f6f
+				&:focus
+					outline: 0
+					background-color: #f1c00e
+					p
 						color: #000
-						cursor: pointer
 .home-item
 	.product-container
 		display: flex
