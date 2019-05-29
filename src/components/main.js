@@ -100,7 +100,7 @@ $(document).ready(function () {
 		},
 	});
 	// increment decrement product-quantity
-	$('.product-quantity .increment').on('click',function () {
+	$('.product-quantity .increment').on('click', function () {
 		var value = $(this).siblings('.number').attr('value');
 		++value;
 		if (value < 99) {
@@ -113,7 +113,7 @@ $(document).ready(function () {
 			})
 		}
 	})
-	$('.product-quantity .decrement').on('click',function () {
+	$('.product-quantity .decrement').on('click', function () {
 		var value = $(this).siblings('.number').attr('value');
 		--value;
 		if (value > 0) {
@@ -221,7 +221,7 @@ $(document).ready(function () {
 		$(this).hide()
 	})
 	//slide-home
-	let  slideLichSuBottom = new Swiper('.home-slider .bottom-swiper', {
+	let slideLichSuBottom = new Swiper('.home-slider .bottom-swiper', {
 		slidesPerView: 6,
 		freeMode: true,
 		watchSlidesVisibility: true,
@@ -239,7 +239,7 @@ $(document).ready(function () {
 				slidesPerView: 3,
 			}
 		},
-		
+
 	});
 	let slideLichSuTop = new Swiper('.home-slider .top-swiper', {
 		slidesPerView: 1,
@@ -252,50 +252,22 @@ $(document).ready(function () {
 		pagination: {
 			el: '.top-swiper .swiper-pagination',
 			type: 'progressbar',
-		  },
+		},
 	});
-	//home-tab
-	filterSelection("all")
-	function filterSelection(c) {
-	var x, i;
-	x = document.getElementsByClassName("product-item");
-	if (c == "all") c = "";
-	for (i = 0; i < x.length; i++) {
-		w3RemoveClass(x[i], "show");
-		if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-	}
-	}
-
-	function w3AddClass(element, name) {
-	var i, arr1, arr2;
-	arr1 = element.className.split(" ");
-	arr2 = name.split(" ");
-	for (i = 0; i < arr2.length; i++) {
-		if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-	}
-	}
-
-	function w3RemoveClass(element, name) {
-	var i, arr1, arr2;
-	arr1 = element.className.split(" ");
-	arr2 = name.split(" ");
-	for (i = 0; i < arr2.length; i++) {
-		while (arr1.indexOf(arr2[i]) > -1) {
-		arr1.splice(arr1.indexOf(arr2[i]), 1);     
-		}
-	}
-	element.className = arr1.join(" ");
-	}
-
-	// Add active class to the current button (highlight it)
-	var btnContainer = document.getElementById(".home-tab");
-	var btns = btnContainer.getElementsByClassName(".btn-tab-home");
-	for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener("click", function(){
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace(" active", "");
-		this.className += " active";
-	});
-	}
-
+	// home tab 2
+	$('.home-tab button').on('click', function () {
+		$('.home-tab button').removeClass('active')
+		$(this).addClass('active')
+		var current = $(this).attr('tab');
+		console.log(current);
+		$('.product-container .product-item').hide()
+		$('.product-container .product-item[tab=' + current + ']').fadeIn()
+	})
+	//Dang nhap dang ki
+	$('.formDN-title a').on('click', function () {
+		var current = $(this).attr('tab');
+		console.log(current);
+		$('.formDN-content .DN').hide()
+		$('.formDN-content .DN[tab=' + current + ']').fadeIn()
+	})
 });

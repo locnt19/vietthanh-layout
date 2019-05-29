@@ -16,20 +16,20 @@ section.home-item
 				.col-lg-8
 					nav.tab-product
 						.home-tab
-							button(onclick="filterSelection('piano')").btn-tab-home
+							button.btn-tab-home(tab='piano')
 								p Piano
-							button(onclick="filterSelection('guitar')").btn-tab-home
+							button.btn-tab-home(tab='guitar')
 								p Guitar
-							button(onclick="filterSelection('guitar')").btn-tab-home
+							button.btn-tab-home
 								p Sản phẩm mới
-							button(onclick="filterSelection('guitar')").btn-tab-home
+							button.btn-tab-home
 								p Violon Suzuki
-							button(onclick="filterSelection('guitar')").btn-tab-home
+							button.btn-tab-home
 								p Đàn Violon
 	.home-item-content
 		.container.product-container
 			-for(i = 0; i < 2; i++)
-				.product-item.piano
+				.product-item(tab='piano')
 					.box-img
 						.new Mới
 						a(href="#")
@@ -56,7 +56,7 @@ section.home-item
 						img(src="./img/cart.png", alt="cart")
 						p Thêm 
 							span vào giỏ hàng
-			.product-item.guitar
+			.product-item(tab='guitar')
 				.box-img
 					.new Mới
 					a(href="#")

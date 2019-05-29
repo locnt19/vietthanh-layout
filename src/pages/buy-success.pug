@@ -11,14 +11,13 @@ html(lang="en")
 
 	//- body(class=bodyClass)
 	body
-		include ../components/admin/index.pug
-		//- block header
-			//- include ../components/header/index.pug
-		//- include ../components/navbar/index.pug
-		//- main
-		//- 	block main
-		//- block footer
-		//- 	include ../components/footer/index.pug
-		//- include ../components/back-to-top/index.pug
+		block header
+			include ../components/header/index.pug
+		main
+			block main
+		include ../components/buy-success/index.pug
+		block footer
+			include ../components/footer/index.pug
+		include ../components/back-to-top/index.pug
 		script(src="./js/global.min.js")
 		script(src="./js/main.min.js")
