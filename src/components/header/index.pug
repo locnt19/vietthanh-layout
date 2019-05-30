@@ -11,43 +11,47 @@ header
 			.row
 				.col
 					a(data-fancybox="" data-src="#formDN" href="javascript:;").btnDN Đăng nhập
-							#formDN
-								.formDN-title
-									a(href="#", tab='dangnhap') Đăng nhập
-									a(href="#", tab='taotaikhoan') Tạo tài khoản
-								.formDN-content
-									.DN(tab='dangnhap')
-										.DN-cont
-											p Email/SĐT
-											input(type="text" placeholder="Nhập email hoặc số điện thoại")
-											p Mật khẩu
-											input(type="text" placeholder="Mật khẩu từ 6 đến 32 kí tự")
-											.quen-mk
-												p Quên mật khẩu,nhấn tại 
-												a(href="#") đây
-											.btn-DN 
-												a(href="#") ĐĂNG NHẬP
-											.btn-DNFB
-												a(href="#") Đăng nhập bằng Facebook
-											.btn-DNGG
-												a(href="#") Đăng nhập bằng Google
-											.btn-DNZL
-												a(href="#") Đăng nhập bằng Zalo
-									.DN(tab='taotaikhoan')
-										.TTK-cont
-											p Nhập họ tên
-											input(type="text")
-											p Mật khẩu
-											input(type="text")
-											p Email
-											input(type="text")
-											p Mật khẩu
-											input(type="text")
-											.checkbox-KM
-												input(type="checkbox")
-												p Nhận các thông tin và chương trình khuyễn mãi qua email
-											.btn-TTK 
-												a(href="#") TẠO TÀI KHOẢN
+						#formDN
+							.formDN-title
+								a(href="#", tab='dangnhap').active Đăng nhập
+								a(href="#", tab='taotaikhoan') Tạo tài khoản
+							.formDN-content
+								.DN(tab='dangnhap')
+									.DN-cont
+										p Email/SĐT
+										input(type="text" placeholder="Nhập email hoặc số điện thoại")
+										p Mật khẩu
+										input(type="text" placeholder="Mật khẩu từ 6 đến 32 kí tự")
+										.quen-mk
+											p Quên mật khẩu,nhấn tại 
+											a(href="#") đây
+										.btn-DN 
+											a(href="#") ĐĂNG NHẬP
+										.btn-DNFB
+											a(href="#") Đăng nhập bằng Facebook
+										.btn-DNGG
+											a(href="#") Đăng nhập bằng Google
+										.btn-DNZL
+											a(href="#") Đăng nhập bằng Zalo
+								.DN(tab='taotaikhoan')
+									.TTK-cont
+										p Nhập họ tên
+										input(type="text")
+										p Mật khẩu
+										input(type="text")
+										p Email
+										input(type="text")
+										p Mật khẩu
+										input(type="text")
+										.checkbox-KM
+											input(type="checkbox")
+											p Nhận các thông tin và chương trình khuyễn mãi qua email
+										.btn-TTK 
+											a(href="#") TẠO TÀI KHOẢN
+									.formDNTC
+										img(src="../img/DKTC.png", alt="Dang ki TC")
+										h4 Bạn đã đăng ký email thành công!
+										p Chúng tôi sẽ cập nhật thông tin khuyến mãi nhanh nhất đến email của bạn.
 	.mobile
 		.container
 			.row

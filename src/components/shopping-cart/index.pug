@@ -51,23 +51,66 @@ section.shopping-cart
 					.deli-content
 						.deli-radio
 							.radio-btn
-									input.radio(type="radio" id='diachigiaohang' name="diachi")
+									input.radio(type="radio" id='diachigiaohang' name="diachi" tab='diachi')
 									label(for="diachigiaohang") Địa chỉ giao hàng
 							.radio-btn
-									input.radio(type="radio" id='showroom' name="diachi")
+									input.radio(type="radio" id='showroom' name="diachi" tab='cometo')
 									label(for="showroom") Đến Showroom xem hàng
-						.form-deli
-							select(name="tinhthanh")
-								option(value="HCM") Thành phố HCM
-							select(name="huyen")
-								option(value="quan1") Quận 1
-							input(type="text" placeholder="Số nhà,tên đường,phường/xã")
-							.radio-btn
-									input.checkbox(type="checkbox" id='cathe' name="thanhtoan")
-									label Cà thẻ khi nhận hàng
-							.radio-btn
-									input.checkbox(type="checkbox" id='hoadon' name="thanhtoan")
-									label Xuất hóa đơn công ty
-							input(type="text" placeholder="Tên công ty")
-							input(type="text" placeholder="Địa chỉ công ty")
-							input(type="text" placeholder="Mã số thuế")
+						.form-deli(tab='diachi')
+							.deli
+								select(name="tinhthanh")
+									option(value="HCM") Thành phố HCM
+								select(name="huyen")
+									option(value="quan1") Quận 1
+								input(type="text" placeholder="Số nhà,tên đường,phường/xã")
+								.checkbox-btn
+										input.checkbox(type="checkbox" id='cathe' name="thanhtoan")
+										label Cà thẻ khi nhận hàng
+								.checkbox-btn
+										input.checkbox(type="checkbox" id='hoadon' name="thanhtoan")
+										label Xuất hóa đơn công ty
+								input(type="text" placeholder="Tên công ty")
+								input(type="text" placeholder="Địa chỉ công ty")
+								input(type="text" placeholder="Mã số thuế")
+								.pay-deli
+									h4 THANH TOÁN KHI NHẬN HÀNG
+									p Không mua không sao
+								.pay-onl
+									h4 THANH TOÁN ONLINE
+									p Bằng thẻ ATM,VISA,MASTER
+						.form-deli(tab='cometo')
+							.cometo
+								select(name="tinhthanh")
+									option(value="HCM") Thành phố HCM
+								select(name="quan")
+									option(value="quan1") Quận 1
+								h4 Sản phẩm hiện đang có ở:
+								.radio-btn
+									input.radio(type="radio" id='diachi1' name="diachi")
+									label(for="diachi1") 368 Cách Mạng Tháng 8,Phường 10,Quận 3,TP.HCM
+								.radio-btn
+									input.radio(type="radio" id='diachi2' name="diachi")
+									label(for="diachi2") 368 Cách Mạng Tháng 8,Phường 10,Quận 3,TP.HCM
+								.radio-btn
+									input.radio(type="radio" id='diachi3' name="diachi")
+									label(for="diachi3") 368 Cách Mạng Tháng 8,Phường 10,Quận 3,TP.HCM
+								.radio-btn
+									input.radio(type="radio" id='diachi4' name="diachi")
+									label(for="diachi4") 368 Cách Mạng Tháng 8,Phường 10,Quận 3,TP.HCM
+								.radio-btn
+									input.radio(type="radio" id='diachi5' name="diachi")
+									label(for="diachi5") 368 Cách Mạng Tháng 8,Phường 10,Quận 3,TP.HCM
+								.timecometo
+									p Thời gian ghé
+									select(name="thoigian")
+										option(value="today") Hôm nay 23/3
+								.checkbox-btn
+										input.checkbox(type="checkbox" id='hoadon' name="thanhtoan")
+										label Xuất hóa đơn công ty
+								.pay-deli
+									h4 THANH TOÁN KHI NHẬN HÀNG
+									p Không mua không sao
+			.cart-rule
+				p Bằng cách đặt hàng, bạn đồng ý với
+				a(href="#") Điều khoản 
+				p sử dụng của VietThanh

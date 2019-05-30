@@ -177,6 +177,7 @@ section.shopping-cart
 							border: 1px solid #d9d9d9
 							border-radius: 5px
 							padding-left: 10px
+							font-family: Roboto
 						@media (max-width: 992px)
 							input
 								flex:0 0 100%
@@ -234,46 +235,190 @@ section.shopping-cart
 									opacity: 1
 									transform: scale(1)
 						.form-deli
-							display: flex
-							justify-content: space-between
-							flex-wrap: wrap
-							background-color: #f0f0f0
-							padding:20px
-							position: relative
-							margin-top: 20px
-							&:after
-								content:''
-								-webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%)
-								clip-path: polygon(50% 0, 0% 100%, 100% 100%)
-								position: absolute
-								top: -12px
-								left: 60px
-								background: #cccccc
-								width:20px
-								height: 13px
-							select
-								flex: 0 0 49%
-								padding: 10px 0
-								border-radius: 5px
-							input
-								flex: 0 0 100%
-								padding: 10px
-								border-radius: 5px
-								border: 1px solid #d9d9d9
-								margin-top: 15px
-							.radio-btn
-								flex: 0 0 100%
-								label
-									padding-left: 10px
+							.deli
+								display: flex
+								justify-content: space-between
+								flex-wrap: wrap
+								background-color: #f0f0f0
+								padding:20px
+								position: relative
+								margin-top: 20px
+								&:after
+									content:''
+									-webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%)
+									clip-path: polygon(50% 0, 0% 100%, 100% 100%)
+									position: absolute
+									top: -12px
+									left: 60px
+									background: #cccccc
+									width:20px
+									height: 13px
+								select
+									flex: 0 0 49%
+									padding: 10px 0
+									border-radius: 5px
+								input
+									flex: 0 0 100%
+									padding: 10px
+									border-radius: 5px
+									border: 1px solid #d9d9d9
+									margin-top: 15px
+								.checkbox-btn
+									flex: 0 0 100%
+									label
+										padding-left: 10px
+								.pay-deli
+									flex: 0 0 49%
+									text-align: center
+									background-color: #ee5401
+									color:#fff
+									border-radius: 5px
+									margin-top: 15px
+									padding:10px 0
+									cursor: pointer
+								.pay-onl
+									flex: 0 0 49%
+									text-align: center
+									background-color: #f9ae01
+									color:#fff
+									border-radius: 5px
+									margin-top: 15px
+									padding:10px 0
+									cursor: pointer
+								@media (max-width: 576px)
+									.pay-deli
+										flex: 0 0 100%
+									.pay-onl
+										flex: 0 0 100%
+							.cometo
+								display: flex
+								justify-content: space-between
+								flex-wrap: wrap
+								background-color: #f0f0f0
+								padding:20px
+								position: relative
+								margin-top: 20px
+								&:after
+									content:''
+									-webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%)
+									clip-path: polygon(50% 0, 0% 100%, 100% 100%)
+									position: absolute
+									top: -12px
+									left: 60px
+									background: #cccccc
+									width:20px
+									height: 13px
+								select
+									flex: 0 0 49%
+									padding: 10px 0
+									border-radius: 5px
+								h4
+									margin:10px 0
+									flex: 0 0 100%
+								.radio-btn
+									display: inline-block
+									margin-right: 20px
+									margin-bottom: 5px
+								.radio
+									&:not(:checked),
+									&:checked
+										display: none
+									&:not(:checked) + label,
+									&:checked + label
+										position: relative
+										padding-left: 35px
+									&:not(:checked) + label:before,
+									&:checked + label:before
+										content: ''
+										position: absolute
+										left: 0
+										top: 0
+										width: 20px
+										height: 20px
+										background: #fff
+										border-radius: 99px
+										box-shadow: inset 0 0 0 1px #ccc
+									&:checked + label:before
+										background: #fff
+										box-shadow: inset 0 0 0 1px #FF8907
+									&:not(:checked) + label:after,
+									&:checked + label:after
+										position: absolute
+										top: 3px
+										left: 3px
+										font-size: 14px
+										color: #FF8907
+										transition: all .2s ease-in-out
+										content: '\f764'
+										display: inline-block
+										font-family: 'Material Design Icons'
+										text-rendering: auto
+										line-height: 1
+										-webkit-font-smoothing: antialiased
+										-moz-osx-font-smoothing: grayscale
+									&:not(:checked) + label:after
+										opacity: 0
+										transform: scale(0)
+									&:checked + label:after
+										opacity: 1
+										transform: scale(1)
+								.timecometo
+									flex:0 0 100%
+									display: flex
+									flex-wrap: wrap
+									p
+										font-size: 15px
+										flex:0 0 100%
+									select
+										flex:0 0 100%
+										padding: 10px 0
+										border-radius: 5px
+								.checkbox-btn
+									flex: 0 0 100%
+									margin:10px 0
+									label
+										padding-left: 10px
+								.pay-deli
+									flex: 0 0 49%
+									text-align: center
+									background-color: #ee5401
+									color:#fff
+									margin: auto
+									border-radius: 5px
+									margin-top: 15px
+									padding:10px 0
+									cursor: pointer
+									h4
+										margin: 0
+									@media(max-width: 576px)
+										flex: 0 0 100%
+							&:last-child
+								display: none
 						@media (max-width: 576px)
 							.deli-radio
 								.radio-btn
 									margin-bottom: 10px
 							.form-deli
-								select
-									flex: 0 0 100%
-									&:first-child
-										margin-bottom: 15px
+								.deli
+									select
+										flex: 0 0 100%
+										&:first-child
+											margin-bottom: 15px
+								.cometo
+									select
+										flex: 0 0 47%
+			.cart-rule
+				display: flex
+				font-size: 12px
+				color:#959595
+				justify-content: center
+				margin:25px 0
+				a
+					margin:0 3px
+					color:#FFCD18
+				@media (max-width: 576px)
+					display: -webkit-box
+					margin-top: 0
 	@media (max-width: 992px)
 		.container-cart
 			width: 100%

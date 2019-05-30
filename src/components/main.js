@@ -265,9 +265,24 @@ $(document).ready(function () {
 	})
 	//Dang nhap dang ki
 	$('.formDN-title a').on('click', function () {
+		$('.formDN-title a').removeClass('active')
+		$(this).addClass('active')
 		var current = $(this).attr('tab');
 		console.log(current);
 		$('.formDN-content .DN').hide()
 		$('.formDN-content .DN[tab=' + current + ']').fadeIn()
+	})
+	//tao tai khoan success
+	$('.btn-TTK ').on('click', function () {
+		$('.TTK-cont').addClass('none')
+		$('.formDNTC').addClass('show')
+		$('.formDN-title').addClass('none')
+	})
+	//radio-checked
+	$('input.radio').on('click', function () {
+		var current = $(this).attr('tab');
+		console.log(current);
+		$('.form-deli').hide()
+		$('.form-deli[tab=' + current + ']').fadeIn()
 	})
 });
