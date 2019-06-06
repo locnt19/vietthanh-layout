@@ -31,6 +31,14 @@ $(document).ready(function () {
 		selector: '.menu-container .main-nav',
 		mobileWrapper: '.mobile-nav',
 		mobileMethod: 'appendTo',
+		desktopWrapper: '.menu-container .navbar-nav .col-12',
+		desktopMethod: 'appendTo',
+		breakpoint: 993,
+	}).watch()
+	var moveNavbarItem = new MappingListener({
+		selector: '.menu-container .main-nav',
+		mobileWrapper: '.mobile-nav',
+		mobileMethod: 'appendTo',
 		desktopWrapper: '.navbar-nav .col-12',
 		desktopMethod: 'appendTo',
 		breakpoint: 993,
@@ -65,11 +73,21 @@ $(document).ready(function () {
 		$(this).find('.btn-dropdown').on('click', function () {
 			$(this).parents().find('.nav-content').slideToggle()
 		})
+	// $('header .mobile-navbar .main-nav li').each(function () {
+	// 	$(this).find('.btn-dropdown').on('click', function () {
+	// 		$(this).parents().find('.nav-content').slideToggle()
+	// 	})
 	})
 
 	// collapse menu container
-	$('.menu-container .navbar-nav .btn-dropdown').on('click', function () {
+	$('.main-nav li:nth-child(2) .btn-dropdown').on('click', function () {
+		$('.menu-container .navbar-menu-no-image').slideToggle()
+		$('.menu-container .navbar-menu').slideUp()
+	})
+	// collapse menu container
+	$('.main-nav li:nth-child(3) .btn-dropdown').on('click', function () {
 		$('.menu-container .navbar-menu').slideToggle()
+		$('.menu-container .navbar-menu-no-image').slideUp()
 	})
 
 	// product detail 
